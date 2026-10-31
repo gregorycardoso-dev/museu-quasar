@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Museu Quasar</title>
+</head>
+
+<body>
+    <header>
+        <h1>Agendamento Museu Quasar</h1>
+        <p>Preencha os requisitos abaixo:</p>
+    </header>
+    <main>
+        <form>
+            <section>
+                <fieldset>
+                    <legend>Dados do visitante:</legend>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required><br>
+                    <label for="Email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="Telefone">Telefone:</label><br>
+                    <input type="tel" id="Telefone" name="Telefone" required><br>
+                    <label for="codigo">Código de Convite:</label><br>
+                    <input type="text" id="codigo" name="codigo" pattern="[A-Z]{3}-[0-9]{3}" title="O código deve ser com 3 letras iniciais maiúsculas,
+                    um hífen no meio, e 3 números." required>
+                    <br>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>Informações da visita:</legend>
+                    <label for="data">Data da visita:</label><br>
+                    <input type="date" id="data" name="data" min="2026-10-29" max="2026-11-09" onkeydown="return false"
+                        required>
+                    <label for="horario">Horário:</label><br>
+                    <input type="time" id="horario" name="horario" min="07:00" max="18:00" onkeydown="return false"><br>
+                    <label for="visitantes">Número de Visitantes:</label><br>
+                    <input type="number" id="visitantes" name="visitantes" min="1" max="5" onkeydown="return false"
+                        required><br>
+                    <p>Tipo de Visita:</p>
+                    <label for="individual">Individual:</label>
+                    <input type="radio" id="individual" name="visita">
+                    <label for="individual">Grupo:</label>
+                    <input type="radio" id="grupo" name="visita">
+                    <label for="familiar">Familiar:</label>
+                    <input type="radio" id="familiar" name="visita">
+
+                    <p>Áreas de Interesse:
+                    </p>
+                    <label for="História">História</label>
+                    <input type="checkbox" id="História" name="História">
+                    <label for="arte">Arte</label>
+                    <input type="checkbox" id="arte" name="arte">
+                    <label for="faunaflora">Fauna e Flora</label>
+                    <input type="checkbox" id="faunaflora" name="faunaflora">
+                    <label for="Geografia">Geografia</label>
+                    <input type="checkbox" id="Geografia" name="Geografia">
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>Preferências e Confirmação</legend>
+                    <p>Exposição Principal:</p>
+                    <select required>
+                        <option title="Exposição da humanidade no início">Sociedade das Cavernas</option>
+                        <option title="Exposição histórica composta por peças LEGO">História em Lego</option>
+                        <option title="Exposição de animais aquáticos com réplicas em tamanho REAL">Embaixo d´água
+                        </option>
+                    </select>
+                    <p>Observações:</p>
+                    <textarea minlength="0" maxlength="200"></textarea>
+
+                    <p>De 1 a 5, dê uma nota para nosso site de agendamento:</p>
+                    <input type="range" min="1" max="5"><br>
+                    <label for="certo">Eu afirmo que minhas informações sao fictícias,<br> o site é um teste e o melhor
+                        baterista é o Mike Portnoy.</label><br>
+                    <input type="checkbox" id="certo" name="certo">
+
+                </fieldset>
+                <br>
+                <button >
+                    Enviar  
+                </button>
+
+            </section>
+
+
+
+
+        </form>
+    </main>
+
+</body>
+
+</html>
